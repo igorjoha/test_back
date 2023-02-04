@@ -44,19 +44,19 @@ export class RetailService {
     return [orders, pagination]
   }
 
-  async findOrder(id: string): Promise<Order | null> {
-
+  async findOrder(id:string) : Promise<Order|null> {
+   return await this.OrderItem.find(id); 
   }
 
-  async orderStatuses(): Promise<CrmType[]> {
-
+  async orderStatuses(): Promise<Order[]> {
+   return await this.Order.find(id);
   }
 
   async productStatuses(): Promise<CrmType[]> {
-
+    return await this.Product.find(name);
   }
 
-  async deliveryTypes(): Promise<CrmType[]> {
-
+  async deliveryTypes(): Promise<OrderDelivery[]> {
+    return await this.deliveryTypes.find(code);
   }
 }
